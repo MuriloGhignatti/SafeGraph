@@ -11,7 +11,9 @@ class IVertex{
         T value;
         std::vector<IEdge<T>*> edges;
     public:
-        T getValue(){
-            return value;
-        }
+        void setValue() = 0;
+        T getValue() = 0;
+        bool hasEdgeWithVertex(IVertex<T> vertex) = 0;
+        void addEdge(IVertex<T> vertex) = 0;
+        void removeEdge(IVertex<T> vertex) = 0;
 };
